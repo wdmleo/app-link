@@ -6,6 +6,8 @@ var handler = createHandler([ // multiple handlers
 // var handler = createHandler({ path: '/webhook1', secret: 'secret1' }) // single handler
  
 http.createServer(function (req, res) {
+    console.log("Receiving request");
+    console.log(req);
   handler(req, res, function (err) {
     res.statusCode = 404
     res.end('no such location')

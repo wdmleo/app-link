@@ -13,6 +13,11 @@ http.createServer(function (req, res) {
   })
 }).listen(7777)
  
+http.on("", () => {
+    console.log("Response ?")
+    res.end('Response');
+});
+
 handler.on('error', function (err) {
   console.error('Error:', err.message)
 })
